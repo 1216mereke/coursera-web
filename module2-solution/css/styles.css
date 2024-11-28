@@ -1,0 +1,96 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Section Styles */
+.box {
+  border: 1px solid black; /* Чёрный border */
+  color: white;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+/* Color Scheme */
+.chicken {
+  background-color: #ff9999; /* Фон для Chicken */
+}
+
+.beef {
+  background-color: #ffcc99; /* Фон для Beef */
+}
+
+.sushi {
+  background-color: #99ccff; /* Фон для Sushi */
+}
+
+/* Text Styling */
+.chicken .text {
+  color: #000000; /* Розовый текст */
+  background-color: #ccc; /* Серый padding */
+  padding: 15px;
+  border: 1px solid black; /* Чёрный border */
+}
+
+.beef .text {
+  color: #000000; /* Красный текст */
+  background-color: #ccc; /* Серый padding */
+  padding: 15px;
+  border: 1px solid black; /* Чёрный border */
+}
+
+.sushi .text {
+  color:#000000; /* Жёлтый текст */
+  background-color: #ccc; /* Серый padding */
+  padding: 15px;
+  border: 1px solid black; /* Чёрный border */
+}
+
+/* Responsive Layouts */
+@media (min-width: 992px) {
+  .box {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .box {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .sushi {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .box {
+    flex: 1 1 100%;
+  }
+}
